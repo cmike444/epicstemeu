@@ -1,1 +1,1 @@
-json.extract! @course, :id, :name, :description, :completed, :—skip-stylesheets, :created_at, :updated_at
+json.extract! @course, :id, :name, :description, :completed, :created_at, :updated_at

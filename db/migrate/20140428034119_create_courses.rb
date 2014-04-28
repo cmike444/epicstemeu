@@ -4,7 +4,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.boolean :completed
-      t.string :—skip-stylesheets
+      
 
       t.timestamps
     end
