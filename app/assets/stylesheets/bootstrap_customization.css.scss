@@ -1,6 +1,56 @@
 @import 'bootstrap';
 
+$portal-background-color: #e2e2e2;
+
+.btn-primary {
+	background-color:#ff9000;
+	border-color:#ff8000;
+}
+.btn-primary:hover {
+	background-color:#ff8000;
+	border-color:#ff9000;
+}
 .jumbotron {
 	margin-top:20px;
 	text-align:center;
+}
+
+.portal {
+width: 300px;
+margin-right: auto;
+margin-left: auto;
+margin-top: 80px;
+}
+.panel.portal {
+border: none;
+-webkit-box-shadow: 0px 0px 100px 1px $portal-background-color;
+-moz-box-shadow: 0px 0px 100px 1px $portal-background-color;
+box-shadow: 0px 0px 100px 1px $portal-background-color;
+}
+
+
+.panel-heading {
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+.panel-primary > .panel-heading {
+	background-color: #ff9000;
+	border-color: #ff8000;
+
+}
+
+.panel-body {
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.panel-title {
+	padding:15px;
+}
+
+#error_explanation h2 {
+	display:none;
+}
+#error_explanation li {
+	list-style:none;
 }
