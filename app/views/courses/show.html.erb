@@ -1,21 +1,44 @@
 <br/>
 <%= render 'layouts/navfront' %>
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @course.name %>
-</p>
+<% if current_admin_user %><%= link_to 'Edit', edit_course_path(@course), :class => "btn btn-primary btn-lg" %><% end %>
+<!--<%= link_to 'Back', courses_path %>-->
 
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
 
-<p>
-  <strong>Completed:</strong>
-  <%= @course.completed %>
-</p>
+<div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="http://placehold.it/200x200" class="rounded8 img-responsive" alt="...">
+        </div>
+        <div class="col-md-9">
+          <h3 class="panel-title"><%= link_to @course.name, @course %></h3>
+          <p class="desc"><%= @course.description %></p>
+          <!--<p><%= @course.completed %></p>-->
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <div class="row">
+        <!--<div class="col-md-3">
+          <%= link_to @course, :class => "btn btn-primary btn-lg" do %>
+          Get Started
+          <i class="fa fa-chevron-right"></i>
+          <% end %>
+        </div>-->
+        <div class="col-md-3">
+        	<a href="#" class="btn btn-primary btn-lg">Continue&nbsp;<i class="fa fa-chevron-right"></i></a>
+        </div>
+        <div class="col-md-9">
+        <div class="note"><strong>Progress:</strong> 60%</div>
+        
+        <div class="progress progress-striped">
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+            <span class="sr-only">60% Complete (warning)</span>
+          </div>
+        </div>
+      </div>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+      </div>
+    </div>
+  </div>

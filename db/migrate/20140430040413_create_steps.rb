@@ -1,11 +1,9 @@
-class CreateCourses < ActiveRecord::Migration
+class CreateSteps < ActiveRecord::Migration
   def change
-    create_table :courses do |t|
+    create_table :steps do |t|
       t.string :name
       t.text :description
       t.boolean :completed
-
-      
 
       t.timestamps
     end

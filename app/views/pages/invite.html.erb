@@ -1,0 +1,41 @@
+<br/>
+<%= render 'layouts/navfront' %>
+
+<div class="jumbotron">
+	<div class="row">
+		
+		<div class="col-md-6">
+			<h3>Invite your friends to Epicsteme!</h3>
+			<p>For every friend you invite, we'll give you 5 jolly ranchers, up to a total of 50 jolly ranchers!</p>
+		</div>
+		
+		<div class="col-md-6">
+			<%= form_for "#" do |f| %>
+					  
+
+				<div class="form-group">
+				  	<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-link"></i></span>
+				  		<%= f.email_field :email, :autofocus => true, :value => "http://referencelink.com/referral/cmike444?uid=8", :class => "form-control" %>
+				  	</div>
+				</div>
+
+				<div class="form-group">
+				  	<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-comments-o"></i></span>
+				  		<%= f.text_area "#", :autofocus => true, :value => "Say something good about us! @epicsteme #epicU #OnlineLearning", :class => "form-control" %>
+				  	</div>
+				</div>
+			  	<div class="pull-left">
+			  		<%= f.submit "Send Tweet", :class => "btn btn-primary twitter" %>&nbsp;<%= f.submit "Post to Facebook", :class => "btn btn-primary facebook" %>
+			  	</div>
+			<% end %>
+		</div>
+	</div>
+	<% if user_signed_in? %>
+			
+	<% else %>
+		
+			
+	<% end %>
+</div>

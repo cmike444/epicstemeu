@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -31,10 +32,19 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 3.1.1'
 
 # Devise for User Authentication
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise'
 
 # Font Awesome
 gem 'font-awesome-rails'
+
+# Gravatars
+gem 'gravatarify', '~> 3.0.0'
+
+# Active Admin
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'formtastic', github: 'justinfrench/formtastic'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

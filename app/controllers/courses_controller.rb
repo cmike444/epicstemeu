@@ -19,6 +19,10 @@ class CoursesController < ApplicationController
 
   # GET /courses/1/edit
   def edit
+    if !current_admin_user
+        flash[:notice] ="Sorry, you can't edit this course"
+        redirect_to(course_path)
+    end
   end
 
   # POST /courses

@@ -1,40 +1,98 @@
 <br />
 <%= render 'layouts/navfront' %>
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <div class="panel-title">
-      <h1>Edit <%= resource_name.to_s.humanize %></h1>
-    </div>
-  </div>
+
+  
+      <h1>Edit <%= resource_name.to_s.humanize %></h1><br/>
+
+<div class="panel panel-default">  
   <div class="panel-body">
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-      <%= devise_error_messages! %>
+    <div class="row">
+      <div class="col-md-6">
 
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control", :autofocus => true %>
-      </div>
 
-      <div class="form-group">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-        <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
-      </div>
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+          <%= devise_error_messages! %>
+          
+          
 
-      <div class="form-group">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-        <%= f.password_field :current_password, class: "form-control" %>
-      </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+              <%= f.email_field :email, class: "form-control", :autofocus => true, :placeholder => "Email Address" %>
+            </div>
+          </div>
 
-      <div class="form-group">
-        <%= f.submit "Update", class: "btn btn-primary" %>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+              <%= f.password_field :password, class: "form-control", :autocomplete => "off", :placeholder => "Leave blank if you don't want to change it" %>
+            </div>
+          </div>
+          <div class="col-md-10">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-check-circle-o"></i></span>
+              <%= f.password_field :current_password, class: "form-control", :autocomplete => "off", :placeholder => "Enter current password to confirm changes" %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+
+          <div class="form-group">
+            <%= f.submit "Update", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+        </div>
       </div>
-    <% end %>
+      <div class="col-md-6">
+        
+        
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 profile">
+                        <%= gravatar_tag current_user.email, :size => 150, :class => "user-profile" %>
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4>
+                            Chris Mikelson</h4>
+                        <small><cite title="San Francisco, USA">Chicago, USA &nbsp;&nbsp;<i class="fa fa-map-marker">
+                        </i></cite></small>
+                        <p>
+                            <i class="fa fa-envelope"></i>&nbsp;&nbsp;<%= "#{current_user.email}" %>
+                            <br />
+                            <i class="fa fa-globe"></i>&nbsp;&nbsp;<a href="http://www.chrismikelson.com">www.chrismikelson.com</a>
+                            <br />
+                            <!--<i class="fa fa-gift"></i>&nbsp;&nbsp;June 02, 1988</p>-->
+                        <!-- Split button -->
+                        <!--<div class="btn-group">
+                            <button type="button" class="btn btn-primary">
+                                Social</button>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span><span class="sr-only">Social</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+                                <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Github</a></li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </div>
+            
+        
+    </div>
+    
+      </div>
+    </div>
   </div>
   <div class="panel-footer">
     <h3>Cancel my account</h3>
 
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
+    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-danger" %></p>
 
-    <%= link_to "Back", :back %>
+    
   </div>
 </div>
+<!--<%= link_to "Back", :back %>-->
