@@ -21,9 +21,10 @@ body {
 .jumbotron {
 	margin-top:20px;
 	text-align:center;
+	border: 1px solid #ddd;
 }
 .jumbotron a {
-	color:#fff
+	color:#fff;
 }
 
 .portal {
@@ -75,6 +76,10 @@ box-shadow: 0px 0px 100px 1px $portal-background-color;
 
 .panel .panel-body .well {
 	margin-bottom:0px;
+}
+.navbar-default {
+	background-color:#fff;
+	border-color:#ddd;
 }
 .navbar .navbar-right a.dropdown-toggle {
 	font-weight:700;

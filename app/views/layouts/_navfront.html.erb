@@ -69,8 +69,17 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
 <div class="row">
   <div class="col-md-12">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
     <% flash.each do |name,msg| %>
       <%= content_tag(:div, msg, class: "alert alert-info") %>
     <% end %>
