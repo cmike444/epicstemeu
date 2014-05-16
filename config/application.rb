@@ -22,6 +22,8 @@ module Epicstemeu
 
     # Required for Heroku
     config.assets.initialize_on_precompile = false
+    config.i18n.enforce_available_locales = false
+
     
   end
 end

@@ -4,10 +4,15 @@ class CreateCourses < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.boolean :completed
-
-      
-
       t.timestamps
     end
+
+    create_table :steps do |t|
+      t.string :name
+      t.text :description
+      t.boolean :completed
+      t.timestamps
+    end
+
   end
 end

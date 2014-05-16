@@ -1,7 +1,7 @@
 <br/>
 <%= render 'layouts/navfront' %>
 
-<h1>Steps</h1>
+<h1 class="page-header">Steps</h1>
 <% if current_admin_user %>
 <div class="pull-right">
 <%= link_to new_step_path, :class => "btn btn-primary" do %>
@@ -19,6 +19,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Completed</th>
+      <th>Course ID</th>
       <th></th>
     </tr>
   </thead>
@@ -29,6 +30,7 @@
         <td><%= step.name %></td>
         <td class="desc"><%= step.description %></td>
         <td><%= step.completed %></td>
+        <td><%= step.course_id %></td>
         <% if current_admin_user %>
         <td class="twoh"><%= link_to step, :class => "btn btn-default btn-xs" do %>
               <i class="fa fa-search"></i>&nbsp; View
