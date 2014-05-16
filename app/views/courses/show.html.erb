@@ -38,7 +38,45 @@
           </div>
         </div>
       </div>
-
-      </div>
     </div>
   </div>
+</div>
+ <div class="table-responsive">
+        <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Completed</th>
+            <th>Course ID</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @course.steps.each do |step| %>
+            <tr>
+              <td><%= step.name %></td>
+              <td class="desc"><%= step.description %></td>
+              <td><%= step.completed %></td>
+              <td><%= step.course_id %></td>
+              <% if current_admin_user %>
+              <td class="twoh"><%= link_to step, :class => "btn btn-default" do %>
+                    <i class="fa fa-search"></i>&nbsp; View
+                  <% end %>&nbsp;
+              <%= link_to edit_step_path(step), :class => "btn btn-default" do %>
+                    <i class="fa fa-edit"></i>&nbsp; Edit
+                  <% end %>&nbsp;
+             <%= link_to step, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default btn-danger" do %>
+                    <i class="fa fa-trash-o"></i>&nbsp; Delete
+                  <% end %></td>
+                  <% else %>
+                  <td class="oneh"><%= link_to step, :class => "btn btn-default" do %>
+                    <i class="fa fa-search"></i>&nbsp; View
+                  <% end %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      </div>

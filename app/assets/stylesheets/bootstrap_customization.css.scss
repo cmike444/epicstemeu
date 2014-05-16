@@ -168,6 +168,10 @@ padding-right: 10px;
 	border-bottom-color:#f2f2f2;
 }
 
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+	vertical-align: middle;
+}
+
 .rounded4 {border-radius:4px;}
 .rounded8 {border-radius:8px;}
 .rounded50 {border-radius:50px;}
