@@ -1,25 +1,20 @@
 <br/>
 <%= render 'layouts/navfront' %>
 
-<% if current_admin_user %>
-  <p>
-    <strong>Completed:</strong>
-    <%= @step.completed %>
-  </p>
-  <%= link_to 'Edit', edit_step_path(@step) %> |
-  <%= link_to 'Back', steps_path %>
-<% end %>
 <div class="row">
   <div class="col-md-9">
     <img src="http://placehold.it/1140x600" class="rounded8 img-responsive" alt="...">
-    <h1><%= @step.name %></h1><br/>
+    <h1><%= @step.name %><% if current_admin_user %><%= link_to edit_step_path(@step), class: "step-edit" do %>
+    <i class="fa fa-edit"></i>
+  <% end %><% end %></h1><br/>
+
 
 <br/>
 
 <ul class="nav nav-tabs">
   <li class="active"><a href="#notes" data-toggle="tab">Lesson Notes</a></li>
-  <li><a href="#reference" data-toggle="tab">Reference</a></li>
   <li><a href="#transcript" data-toggle="tab">Transcript</a></li>
+  <li><a href="#reference" data-toggle="tab">Reference</a></li>
   <li><a href="#support" data-toggle="tab">Q & A</a></li>
   
 </ul>
@@ -29,21 +24,34 @@
   <div class="tab-pane active" id="notes">
     <div class="row">
       <div class="col-md-12"><br/>
-    <p class="desc">
+    <p>
   <strong>Description:</strong>&nbsp;
   <%= @step.description %>
+
     </p>
   </div>
 </div>
 </div>
+<div class="tab-pane" id="transcript">
+    <div class="row">
+      <div class="col-md-12"><br/>
+        <p><strong>Transcript:</strong>&nbsp;
+        <%= @step.description %>
+      </p>
+      </div>
+    </div>
+  </div>
   <div class="tab-pane" id="reference">
     <div class="row">
-      <div class="col-md-12">
-        <p class="desc"><strong>Description:</strong>&nbsp;Reference</p>
+      <div class="col-md-12"><br/>
+        <p><strong>Reference:</strong>&nbsp;
+        <%= @step.description %>
+      </p>
       </div>
     </div>
 
   </div>
+  
   <div class="tab-pane" id="support">
     <div class="row">
       <div class="col-md-12">
@@ -69,13 +77,7 @@
     </div>
 
   </div>
-  <div class="tab-pane" id="transcript">
-    <div class="row">
-      <div class="col-md-12">
-        <p class="desc"><strong>Description:</strong>&nbsp;Transcript</p>
-      </div>
-    </div>
-  </div>
+  
   
 </div>
 </div>

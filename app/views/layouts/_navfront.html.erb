@@ -33,9 +33,9 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
         <li><%= link_to "Courses", courses_path %></li>
-        <li><%= link_to "Steps", steps_path %></li>
+        <!--<li><%= link_to "Steps", steps_path %></li>-->
           <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= gravatar_tag current_user.email %>&nbsp;&nbsp;<%= "#{current_user.email}" %> <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= gravatar_tag current_user.email %>&nbsp;&nbsp;<span class="account-email"><%= "#{current_user.email}" %></span> <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><%= link_to edit_user_registration_path do %>
               <i class="fa fa-gear"></i>&nbsp;&nbsp; Account Settings

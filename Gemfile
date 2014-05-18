@@ -40,6 +40,12 @@ gem 'font-awesome-rails'
 # Gravatars
 gem 'gravatarify', '~> 3.0.0'
 
+# Masonry
+gem 'masonry-rails'
+
+# Paperclip
+gem "paperclip", "~> 4.1"
+
 # Active Admin
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'polyamorous', github: 'activerecord-hackery/polyamorous'

@@ -1,13 +1,18 @@
 @import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
 $portal-background-color: #e2e2e2;
 
 a, a:link, a:visited  {
 	text-decoration:none;
 }
+p {
+	margin:0;
+}
 
 body {
 	background-color:#f2f2f2;
+	font-family: 'Varela Round', sans-serif;
 }
 
 .btn-primary {
@@ -101,6 +106,9 @@ box-shadow: 0px 0px 100px 1px $portal-background-color;
 .navbar-default .navbar-nav > li > a {
 	width:100%
 }
+.navbar span.account-email {
+	font-size:12px;
+}
 
 .oneh {
 	width:100px;
@@ -129,9 +137,8 @@ box-shadow: 0px 0px 100px 1px $portal-background-color;
 }
 
 .alert {
-	position: fixed;
+position: fixed;
 top: 20px;
-right: 50;
 padding: 15px 100px;
 }
 
@@ -141,6 +148,7 @@ margin-top: 12px;
 }*/
 .panel-footer {
 	padding:10px 30px;
+	background-color:#eee;
 }
 .note {
 	padding:10px 0px 10px 0px;
@@ -155,12 +163,24 @@ margin-top: 12px;
 	font-size:34px;
 }
 p.desc {
-font-size: 16px;
+font-size: 12px;
+font-weight: 300;
 line-height: 24px;
 color:#666;
-padding-left:10px;
-padding-right: 10px;
+padding-bottom:5px;
 
+}
+.pull-right a.btn {
+	margin-top:12px;
+}
+.row .icon i {
+	font-size:150px;
+}
+i.false {
+	color:#ccc;
+}
+i.true {
+	color:#5cb85c;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -171,6 +191,26 @@ padding-right: 10px;
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
 	vertical-align: middle;
 }
+
+.course-edit {
+	position: absolute;
+	top: -8px;
+	right: 10px;
+	font-size: 18px;
+	color:#ccc;
+}
+.course-edit:hover {
+	color:#666;
+}
+.step-edit {
+	font-size: 18px;
+	color:#ccc;
+}
+.step-edit:hover {
+	color:#666;
+}
+
+
 
 .rounded4 {border-radius:4px;}
 .rounded8 {border-radius:8px;}

@@ -1,5 +1,6 @@
 class StepsController < ApplicationController
   before_action :set_step, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /steps
   # GET /steps.json
@@ -69,6 +70,6 @@ class StepsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def step_params
-      params.require(:step).permit(:name, :description, :completed)
+      params.require(:step).permit(:name, :description, :completed, :transcript, :length)
     end
 end

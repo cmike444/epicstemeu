@@ -28,6 +28,7 @@
               <%= f.password_field :password, class: "form-control", :autocomplete => "off", :placeholder => "Leave blank if you don't want to change it" %>
             </div>
           </div>
+          
           <div class="col-md-10">
           <div class="form-group">
             <div class="input-group">
@@ -45,48 +46,15 @@
         </div>
       </div>
       <div class="col-md-6">
-        
-        
-            <div class="well well-sm">
-                <div class="row">
-                    <div class="col-sm-6 col-md-4 profile">
-                        <%= gravatar_tag current_user.email, :size => 150, :class => "user-profile" %>
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>
-                            Chris Mikelson</h4>
-                        <small><cite title="San Francisco, USA">Chicago, USA &nbsp;&nbsp;<i class="fa fa-map-marker">
-                        </i></cite></small>
-                        <p>
-                            <i class="fa fa-envelope"></i>&nbsp;&nbsp;<%= "#{current_user.email}" %>
-                            <br />
-                            <i class="fa fa-globe"></i>&nbsp;&nbsp;<a href="http://www.chrismikelson.com">www.chrismikelson.com</a>
-                            <br />
-                            <!--<i class="fa fa-gift"></i>&nbsp;&nbsp;June 02, 1988</p>-->
-                        <!-- Split button -->
-                        <!--<div class="btn-group">
-                            <button type="button" class="btn btn-primary">
-                                Social</button>
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                <span class="caret"></span><span class="sr-only">Social</span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
-                                <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Github</a></li>
-                            </ul>
-                        </div>-->
-                    </div>
-                </div>
-            
-        
-    </div>
-    
-      </div>
-    </div>
+          
+        <div class="well well-sm">
+                        <div class="col-md-4"><%= gravatar_tag current_user.email, :size => 150, :class => "user-profile" %></div>
+                            <div class="col-md-8"><p class="desc"><i class="fa fa-user"></i>&nbsp;&nbsp;<%= "#{current_user.email}" %></p></div>
+                            <div class="clearfix"></div>
+            </div>
+        </div>
   </div>
+</div>
   <div class="panel-footer">
     <h3>Cancel my account</h3>
 
