@@ -1,0 +1,25 @@
+<h1>Listing course_images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @course_images.each do |course_image| %>
+      <tr>
+        <td><%= link_to 'Show', course_image %></td>
+        <td><%= link_to 'Edit', edit_course_image_path(course_image) %></td>
+        <td><%= link_to 'Destroy', course_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Course image', new_course_image_path %>

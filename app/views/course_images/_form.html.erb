@@ -1,0 +1,29 @@
+<%= form_for(@course_image, html: {multipart: true}) do |f| %>
+  <% if @course_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course_image.errors.count, "error") %> prohibited this course_image from being saved:</h2>
+
+      <ul>
+      <% @course_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :asset %>
+    <%= f.file_field :asset, html: { class: 'form-control'} %>
+    <% if f.object.asset? %>
+      <br/>
+      <em>Current iamge</em>
+      <%= image_tag(f.object.asset.url(:small)) %>
+      <br/>
+    <% end %>
+</div>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary"%>
+  </div>
+<% end %>
+
+

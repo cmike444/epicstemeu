@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @course_image.asset.url(:medium), class: "img-responsive" %>
+
+<%= link_to 'Edit', edit_course_image_path(@course_image) %> |
+<%= link_to 'Back', course_images_path %>
