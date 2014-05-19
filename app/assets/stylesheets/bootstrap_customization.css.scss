@@ -6,6 +6,12 @@ $portal-background-color: #e2e2e2;
 a, a:link, a:visited  {
 	text-decoration:none;
 }
+a {
+	color:#b7c0c7;
+	&:hover {
+		color:#c5ccd2;
+	}
+}
 p {
 	margin:0;
 }
@@ -109,6 +115,12 @@ box-shadow: 0px 0px 100px 1px $portal-background-color;
 .navbar span.account-email {
 	font-size:12px;
 }
+.nav.nav-tabs > li > a:hover, .nav > li > a:focus {
+	background-color:rgba(0,0,0,0);
+}
+.nav-tabs > li > a:hover {
+	border-color:rgba(0,0,0,0);
+}
 
 .oneh {
 	width:100px;
@@ -202,6 +214,27 @@ i.true {
 .course-edit:hover {
 	color:#666;
 }
+.course-index-edit {
+	position: absolute;
+	top: -8px;
+	right: 10px;
+	font-size: 18px;
+	color:#ccc;
+	display:none;
+	&:hover {
+		display: block;
+	}
+}
+.add-step {
+	position: absolute;
+	top: -8px;
+	right: 30px;
+	font-size: 18px;
+	color:#ccc;
+}
+.add-step:hover {
+	color:#666;
+}
 .step-edit {
 	font-size: 18px;
 	color:#ccc;
@@ -209,7 +242,9 @@ i.true {
 .step-edit:hover {
 	color:#666;
 }
-
+footer {
+	margin:80px 0 20px;
+}
 
 
 .rounded4 {border-radius:4px;}

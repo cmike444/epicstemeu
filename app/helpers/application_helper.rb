@@ -1,5 +1,6 @@
 module ApplicationHelper
 	def course_progress
-		number_to_percentage(@course.steps.where(:completed => true).size / @course.steps.size, precision: 0)
+		ratio = @course.steps.where(:completed => true).size / @course.steps.size
+		number_to_percentage(ratio, precision: 0)
 	end
 end

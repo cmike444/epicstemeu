@@ -10,28 +10,32 @@
       </ul>
     </div>
   <% end %>
+  <div class="form-group">
+    <%= f.label :course_id %><br>
+    <%= f.text_field :course_id, class: "form-control" %>
+  </div>
 
   <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :transcript %><br>
-    <%= f.text_area :transcript %>
+    <%= f.text_area :transcript, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :length %><br>
-    <%= f.text_field :length %>
+    <%= f.text_field :length, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :completed %><br>
     <%= f.check_box :completed %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit  %>
   </div>
 <% end %>

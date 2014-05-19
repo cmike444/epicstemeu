@@ -16,6 +16,8 @@
   <li><a href="#transcript" data-toggle="tab">Transcript</a></li>
   <li><a href="#reference" data-toggle="tab">Reference</a></li>
   <li><a href="#support" data-toggle="tab">Q & A</a></li>
+  <a href="#" class="btn btn-success pull-right">Complete & Continue</a>
+
   
 </ul>
 
@@ -35,18 +37,41 @@
 <div class="tab-pane" id="transcript">
     <div class="row">
       <div class="col-md-12"><br/>
-        <p><strong>Transcript:</strong>&nbsp;
-        <%= @step.description %>
-      </p>
+        <p><strong>Transcript:</strong></p>
+        <%= @step.transcript %>
       </div>
     </div>
   </div>
   <div class="tab-pane" id="reference">
     <div class="row">
-      <div class="col-md-12"><br/>
-        <p><strong>Reference:</strong>&nbsp;
-        <%= @step.description %>
-      </p>
+      <div class="col-md-6"><br/>
+        <h3 style="margin-top: 7px; margin-bottom: 8px;">Before You Ask</h3>
+      <strong>Tips for Finding Solutions</strong>
+      <ul>
+        <li>Check out <a href="#support" data-toggle="tab">the troubleshooting tab</a> for this lesson</li>
+        <li>Search <a href="http://www.google.com" target="_blank">Google</a> and <a href="http://stackoverflow.com" target="_blank">Stack Overflow</a>, or even <a href="http://stackoverflow.com/" target="_blank">post a question</a></li>
+        <li>Read your error message: <a href="http://blog.onemonthrails.com/4-debugging-techniques-every-developer-should-know-markdown/" target="_blank">watch this video to learn how</a></li>
+        <li>Did you run your database migrations <a href="#" rel="popover" data-container="body" data-content="$ rake db:migrate" data-original-title="How do I run a local migration?">locally</a> and on <a href="#" rel="popover" data-container="body" data-content="$ heroku run rake db:migrate" data-original-title="How do I run a Heroku migration?">Heroku</a>?</li>
+        <li>Read the <a href="http://api.rubyonrails.org/" target="_blank">Rails</a>, <a href="//devcenter.heroku.com" target="_blank">Heroku</a>, or <a href="//rubygems.org/gems" target="_blank">gem</a> documentation</li>
+        <li>Check your <a href="//devcenter.heroku.com/articles/error-codes" target="_blank">Heroku logs</a> and <a href="//developers.google.com/chrome-developer-tools/docs/console" target="_blank"> Chrome's DevTools Console</a></li>
+
+      </ul>
+
+
+      </div>
+      <div class="col-md-6"><br/>
+        <h3 style="margin-top: 7px; margin-bottom: 8px;">Asking Questions</h3>
+      <ul>
+        <li>Be clear, concise and descriptive</li>
+        <li>List the error message</li>
+        <li>List the course and step (if not already listed)</li>
+        <li>Link to your GitHub repo and Heroku page</li>
+        <li>Edit your post with the solution if you find it</li>
+      </ul>
+      Start crafting your message to <a href="mailto:teachers@onemonth.com">teachers@u.epicsteme.com</a>
+    </div>
+    <div style="width:93%; float: left;">
+      <strong>For discussion visit our <a href="//onemonth.com/comments" target="_blank">main Q&amp;A</a></strong>
       </div>
     </div>
 
@@ -82,6 +107,22 @@
 </div>
 </div>
 <div class="col-md-3">
+  <h4>Instructor</h4>
+    <div class="pull-left">
+    <span class="course-author-image"><%= gravatar_tag current_user.email %></span>
+    </div>
+    <div class="pull-left course-author-name">
+      <p><strong>Chris Mikelson</strong></p>
+    </div>
+    <div class="clearfix"></div>
+    <p>This is text about the author. This is text about the author. This is text about the author.</p>
+    <hr>
+    <h4>Resources</h4>
+    <div class="list-group">
+      <a href="#" class="list-group-item"><i class="fa fa-folder-open-o"></i>&nbsp;&nbsp;Project Files</a>
+      <a href="#" class="list-group-item"><i class="fa fa-film"></i>&nbsp;&nbsp;Video Transcript</a>
+      <a href="#" class="list-group-item"><i class="fa fa-file-o"></i>&nbsp;&nbsp;Download PDF</a>
+    </div>
   </div>
 </div>
 <script type="text/javascript">

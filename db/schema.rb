@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518160345) do
+ActiveRecord::Schema.define(version: 20140519012011) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -67,6 +67,9 @@ ActiveRecord::Schema.define(version: 20140518160345) do
     t.string   "feature_image_content_type"
     t.integer  "feature_image_file_size"
     t.datetime "feature_image_updated_at"
+    t.string   "project_files"
+    t.string   "video_transcript"
+    t.string   "pdf_download"
   end
 
   add_index "courses", ["user_id"], name: "index_courses_on_user_id"

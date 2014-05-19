@@ -20,6 +20,18 @@
     <%= f.text_area :description %>
   </div>
   <div class="form-group">
+    <%= f.label :project_files %><br>
+    <%= f.text_field :project_files %>
+  </div>
+  <div class="form-group">
+    <%= f.label :video_transcript %><br>
+    <%= f.text_field :video_transcript %>
+  </div>
+  <div class="form-group">
+    <%= f.label :pdf_download %><br>
+    <%= f.text_field :pdf_download %>
+  </div>
+  <div class="form-group">
     <%= f.check_box :completed %>&nbsp;&nbsp; <%= f.label :completed %>
   </div>
   <div class="form-group">
