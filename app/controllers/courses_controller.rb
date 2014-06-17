@@ -14,21 +14,18 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
-    @course = Course.new
+    @course = current_user.courses.build
   end
 
   # GET /courses/1/edit
   def edit
-    if !current_admin_user
-        flash[:notice] ="Sorry, you can't edit this course"
-        redirect_to(course_path)
-    end
+    
   end
 
   # POST /courses
   # POST /courses.json
   def create
-    @course = Course.new(course_params)
+    @course = current_user.courses.build(course_params)
 
     respond_to do |format|
       if @course.save
@@ -73,6 +70,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:name, :description, :completed, :feature_image)
+      params.require(:course).permit(:name, :description, :completed, :feature_image, :user_id)
     end
 end

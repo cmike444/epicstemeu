@@ -8,7 +8,7 @@ Epicstemeu::Application.routes.draw do
   resources :courses
 
   devise_for :users
-  root "pages#home"
+  root "courses#index"
 
   get "about" => "pages#about"
   get "invite" => "pages#invite"

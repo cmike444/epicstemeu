@@ -84,8 +84,8 @@
   </div>
   <div class="col-md-3">
     <h4>Instructor</h4>
-    <div class="pull-left">
-    <span class="course-author-image"><%= gravatar_tag current_user.email %></span>
+    <div class="pull-left course-author-image">
+      <%= gravatar_tag @course.user.email %> 
     </div>
     <div class="pull-left course-author-name">
       <p><strong>Chris Mikelson</strong></p>
